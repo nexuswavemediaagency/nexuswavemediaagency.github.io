@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Nexus Wave Media Agency – Digital Marketing Pakistan</title>
+<meta name="description" content="Nexus Wave Media Agency – Social media, paid ads, content creation, automation, web design and AI tools for businesses across Pakistan and beyond."/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23111110'/><text y='72' x='10' font-size='68' font-family='Arial Black' font-weight='900' fill='%23C8F04A'>N</text></svg>"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#F7F6F2;--ink:#111110;--muted:#6B6B67;--accent:#C8F04A;--adark:#9BBF1A;--border:#E2E1DC;--r:16px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,h4{font-family:'Syne',sans-serif;line-height:1.1;}
+img{max-width:100%;display:block;}
+
+/* ── NAV ─────────────────────────────── */
+nav{position:fixed;top:0;left:0;right:0;z-index:99;display:flex;align-items:center;justify-content:space-between;padding:16px 56px;background:rgba(247,246,242,.95);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:'Syne',sans-serif;font-weight:800;font-size:18px;letter-spacing:-.3px;}
+.logo-mark{width:32px;height:32px;background:var(--ink);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;color:var(--accent);flex-shrink:0;}
+.logo span{color:var(--adark);}
+.nav-links{display:flex;gap:6px;list-style:none;}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:13.5px;font-weight:500;padding:7px 14px;border-radius:100px;transition:all .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);background:rgba(0,0,0,.06);}
+.nav-links a.active{font-weight:700;}
+.nav-btn{background:var(--ink);color:#fff;padding:10px 22px;border-radius:100px;font-size:13.5px;font-weight:600;text-decoration:none;font-family:'Syne',sans-serif;transition:background .2s,transform .15s;white-space:nowrap;}
+.nav-btn:hover{background:#333;transform:translateY(-1px);}
+/* mobile nav */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;}
+.hamburger span{width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s;}
+.mobile-menu{display:none;position:fixed;top:65px;left:0;right:0;background:rgba(247,246,242,.98);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);padding:16px 24px 24px;z-index:98;flex-direction:column;gap:4px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{text-decoration:none;color:var(--ink);font-size:15px;font-weight:500;padding:12px 16px;border-radius:12px;transition:background .2s;}
+.mobile-menu a:hover{background:rgba(0,0,0,.06);}
+.mobile-menu .mob-btn{background:var(--ink);color:#fff;text-align:center;font-family:'Syne',sans-serif;font-weight:700;margin-top:8px;padding:14px;border-radius:100px;}
+.mobile-menu .mob-btn:hover{background:#333;}
+
+/* ── HERO ─────────────────────────────── */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:160px 56px 100px;position:relative;overflow:hidden;}
+.hero-glow{position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:520px;height:520px;background:var(--accent);border-radius:50%;opacity:.12;filter:blur(90px);pointer-events:none;transition:transform .1s linear;}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--ink);padding:7px 18px;border-radius:100px;font-size:12px;font-weight:700;font-family:'Syne',sans-serif;letter-spacing:1px;margin-bottom:32px;width:fit-content;opacity:0;animation:fadeUp .6s .1s forwards;}
+.hero-pill::before{content:"●";font-size:7px;}
+.hero h1{font-size:clamp(48px,7.5vw,100px);font-weight:800;line-height:.98;letter-spacing:-4px;max-width:900px;margin-bottom:28px;opacity:0;animation:fadeUp .7s .25s forwards;}
+.hero h1 em{font-style:normal;color:var(--muted);}
+.hero-sub{font-size:18px;color:var(--muted);max-width:500px;line-height:1.75;margin-bottom:44px;font-weight:300;opacity:0;animation:fadeUp .7s .4s forwards;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .55s forwards;}
+.btn-dark{background:var(--ink);color:#fff;padding:16px 32px;border-radius:100px;font-size:15px;font-weight:700;font-family:'Syne',sans-serif;text-decoration:none;display:inline-block;transition:background .2s,transform .2s;white-space:nowrap;}
+.btn-dark:hover{background:#333;transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:var(--ink);padding:16px 32px;border-radius:100px;border:1.5px solid var(--border);font-size:15px;font-weight:500;text-decoration:none;display:inline-block;transition:all .2s;white-space:nowrap;}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px);}
+.hero-stats{display:flex;gap:52px;flex-wrap:wrap;margin-top:72px;padding-top:40px;border-top:1px solid var(--border);opacity:0;animation:fadeUp .7s .7s forwards;}
+.stat-n{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;letter-spacing:-1.5px;line-height:1;}
+.stat-n span{color:var(--adark);}
+.stat-l{font-size:13px;color:var(--muted);margin-top:4px;letter-spacing:.2px;}
+
+/* ── TRUST BAR ───────────────────────── */
+.trust-bar{background:var(--ink);padding:20px 56px;display:flex;align-items:center;gap:32px;overflow:hidden;}
+.trust-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'Syne',sans-serif;white-space:nowrap;flex-shrink:0;}
+.trust-divider{width:1px;height:20px;background:rgba(255,255,255,.1);flex-shrink:0;}
+.trust-clients{display:flex;gap:28px;flex-wrap:wrap;align-items:center;}
+.trust-client{font-size:13px;font-weight:500;color:rgba(255,255,255,.45);white-space:nowrap;letter-spacing:.3px;}
+
+/* ── SECTION BASE ─────────────────────── */
+.sec{padding:100px 56px;}
+.sec-tag{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:22px;font-family:'Syne',sans-serif;}
+.sec-tag.light{color:var(--muted);}
+.sec-tag.acc{color:var(--accent);}
+.sec-tag.acc-dark{color:var(--adark);}
+.sec-title{font-size:clamp(30px,4vw,52px);font-weight:800;letter-spacing:-2.5px;line-height:1.08;margin-bottom:18px;}
+.sec-sub{font-size:17px;font-weight:300;line-height:1.75;max-width:520px;margin-bottom:56px;color:var(--muted);}
+
+/* ── WHAT WE DO ───────────────────────── */
+.what-we-do{background:var(--ink);}
+.what-we-do .sec-title{color:#fff;}
+.what-we-do .sec-sub{color:rgba(255,255,255,.4);}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+@media(min-width:1100px){.services-grid{grid-template-columns:repeat(3,1fr);}}
+.svc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r);padding:32px 28px;transition:background .3s,transform .3s,border-color .3s;position:relative;overflow:hidden;}
+.svc:hover{background:rgba(255,255,255,.08);transform:translateY(-5px);border-color:rgba(200,240,74,.3);}
+.svc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+.svc:hover::before{transform:scaleX(1);}
+.svc-num{font-size:11px;font-weight:700;letter-spacing:2px;font-family:'Syne',sans-serif;color:var(--accent);margin-bottom:20px;}
+.svc-icon{font-size:28px;margin-bottom:16px;display:block;}
+.svc h3{font-size:17px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-.3px;}
+.svc p{font-size:13.5px;color:rgba(255,255,255,.42);line-height:1.7;}
+.svc-new{display:inline-block;font-size:9px;font-weight:700;background:rgba(200,240,74,.2);color:var(--accent);border:1px solid rgba(200,240,74,.3);padding:2px 9px;border-radius:100px;margin-top:10px;font-family:'Syne',sans-serif;letter-spacing:.5px;}
+.services-cta{text-align:center;margin-top:44px;}
+.services-cta a{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-size:14px;font-weight:600;text-decoration:none;font-family:'Syne',sans-serif;border:1px solid rgba(200,240,74,.25);padding:11px 26px;border-radius:100px;transition:all .2s;}
+.services-cta a:hover{background:rgba(200,240,74,.08);border-color:rgba(200,240,74,.5);}
+
+/* ── PROCESS ──────────────────────────── */
+.process{background:#EAEAE4;}
+.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;position:relative;}
+.process-steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:var(--border);z-index:0;}
+.step{position:relative;z-index:1;padding:0 16px;text-align:center;}
+.step-num{width:56px;height:56px;border-radius:50%;border:2px solid var(--border);background:var(--bg);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:18px;font-weight:800;margin:0 auto 20px;transition:all .3s;color:var(--ink);}
+.step:hover .step-num{background:var(--ink);color:var(--accent);border-color:var(--ink);}
+.step h4{font-size:15px;font-weight:700;margin-bottom:8px;letter-spacing:-.2px;}
+.step p{font-size:13px;color:var(--muted);line-height:1.65;}
+
+/* ── WHY US ───────────────────────────── */
+.why{background:var(--bg);}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+.why-list{display:flex;flex-direction:column;}
+.why-item{display:flex;gap:18px;align-items:flex-start;padding:24px 0;border-bottom:1px solid var(--border);transition:transform .25s;}
+.why-item:hover{transform:translateX(8px);}
+.why-item:first-child{border-top:1px solid var(--border);}
+.why-check{width:28px;height:28px;min-width:28px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;margin-top:2px;flex-shrink:0;}
+.why-item h4{font-size:16px;font-weight:700;margin-bottom:6px;letter-spacing:-.2px;}
+.why-item p{font-size:14px;color:var(--muted);line-height:1.7;}
+.why-box{background:var(--ink);border-radius:24px;padding:44px 40px 48px;color:#fff;overflow:hidden;}
+.why-box h3{font-size:22px;font-weight:800;letter-spacing:-.5px;margin-bottom:12px;color:#fff;line-height:1.3;}
+.why-box>p{color:rgba(255,255,255,.45);font-size:14px;margin-bottom:36px;line-height:1.75;}
+.bstat{margin-bottom:24px;}
+.bnum{font-family:'Syne',sans-serif;font-size:42px;font-weight:800;letter-spacing:-2px;color:var(--accent);line-height:1.1;}
+.blabel{font-size:13px;color:rgba(255,255,255,.35);margin-top:5px;line-height:1.5;}
+
+/* ── RESULTS ──────────────────────────── */
+.results{background:var(--ink);}
+.results .sec-title{color:#fff;}
+.results .sec-sub{color:rgba(255,255,255,.4);}
+.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:64px;}
+.result-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r);padding:32px 24px;text-align:center;}
+.result-big{font-family:'Syne',sans-serif;font-size:52px;font-weight:800;letter-spacing:-3px;color:var(--accent);line-height:1;}
+.result-label{font-size:13px;color:rgba(255,255,255,.4);margin-top:8px;line-height:1.5;}
+
+/* ── PORTFOLIO PREVIEW ────────────────── */
+.portfolio-preview{background:#EAEAE4;}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;}
+.pcard{background:var(--ink);border-radius:var(--r);overflow:hidden;text-decoration:none;display:block;transition:transform .25s,box-shadow .25s;}
+.pcard:hover{transform:translateY(-6px);box-shadow:0 24px 52px rgba(0,0,0,.2);}
+.pthumb{height:180px;display:flex;align-items:center;justify-content:center;font-size:44px;position:relative;}
+.pthumb-tag{position:absolute;bottom:10px;left:10px;background:var(--accent);color:var(--ink);font-size:10px;font-weight:700;font-family:'Syne',sans-serif;padding:3px 10px;border-radius:100px;}
+.pbody{padding:22px;}
+.pmeta{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:6px;font-family:'Syne',sans-serif;}
+.ptitle{font-size:16px;font-weight:700;color:#fff;margin-bottom:10px;line-height:1.3;}
+.pbadges{display:flex;gap:6px;flex-wrap:wrap;}
+.pbadge{background:rgba(200,240,74,.1);color:var(--accent);font-size:10px;font-weight:700;padding:3px 10px;border-radius:100px;border:1px solid rgba(200,240,74,.2);}
+.viewall{text-align:center;margin-top:44px;}
+
+/* ── TESTIMONIALS ─────────────────────── */
+.testi{background:var(--bg);}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;}
+.tcard{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:30px;transition:transform .2s,box-shadow .2s;}
+.tcard:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.07);}
+.tstars{color:var(--adark);font-size:14px;margin-bottom:14px;letter-spacing:2px;}
+.ttext{font-size:14px;color:var(--ink);line-height:1.8;margin-bottom:20px;font-style:italic;}
+.tauthor{display:flex;align-items:center;gap:12px;}
+.tavatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;font-family:'Syne',sans-serif;color:var(--ink);flex-shrink:0;}
+.tname{font-size:14px;font-weight:700;letter-spacing:-.1px;}
+.trole{font-size:12px;color:var(--muted);margin-top:2px;}
+
+/* ── FAQ ──────────────────────────────── */
+.faq{background:#EAEAE4;}
+.faq-list{max-width:760px;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-item:first-child{border-top:1px solid var(--border);}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:22px 0;cursor:pointer;gap:16px;}
+.faq-q h4{font-size:16px;font-weight:600;color:var(--ink);transition:color .2s;line-height:1.4;}
+.faq-q:hover h4{color:var(--adark);}
+.faq-icon{width:30px;height:30px;min-width:30px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--muted);transition:all .2s;font-weight:300;}
+.faq-item.open .faq-icon{background:var(--ink);color:#fff;border-color:var(--ink);}
+.faq-a{display:none;padding:0 0 22px;font-size:14px;color:var(--muted);line-height:1.8;max-width:680px;}
+.faq-item.open .faq-a{display:block;}
+
+/* ── CONTACT ──────────────────────────── */
+.contact{background:var(--ink);text-align:center;}
+.contact .sec-title{color:#fff;margin:0 auto 16px;max-width:640px;}
+.contact .sec-sub{margin:0 auto 48px;color:rgba(255,255,255,.4);text-align:center;}
+.cform{max-width:500px;margin:0 auto;display:flex;flex-direction:column;gap:12px;text-align:left;}
+.crow{display:flex;gap:10px;}
+.cinput{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px 18px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s;line-height:1.5;}
+.cinput:focus{border-color:var(--accent);}
+.cinput::placeholder{color:rgba(255,255,255,.28);}
+textarea.cinput{resize:vertical;min-height:110px;}
+.csub{background:var(--accent);color:var(--ink);padding:16px;border-radius:100px;font-size:15px;font-weight:800;font-family:'Syne',sans-serif;border:none;cursor:pointer;width:100%;transition:background .2s,transform .2s;margin-top:4px;}
+.csub:hover{background:var(--adark);transform:translateY(-2px);}
+.csub:disabled{opacity:.6;cursor:not-allowed;transform:none;}
+.cmsg{font-size:13px;font-weight:600;padding:12px 16px;border-radius:12px;display:none;margin-top:4px;}
+.cmsg.ok{background:rgba(200,240,74,.12);color:var(--accent);}
+.cmsg.err{background:rgba(255,80,80,.12);color:#ff8888;}
+
+/* ── FOOTER ───────────────────────────── */
+footer{background:#090909;padding:56px 56px 28px;}
+.ftop{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:40px;margin-bottom:48px;}
+.fbrand{}
+.flogo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:#fff;margin-bottom:6px;letter-spacing:-.2px;}
+.flogo span{color:var(--accent);}
+.ftagline{font-size:12px;color:rgba(255,255,255,.28);margin-bottom:20px;line-height:1.6;}
+.fcontact a{display:block;color:rgba(255,255,255,.4);text-decoration:none;font-size:13px;margin-bottom:8px;transition:color .2s;}
+.fcontact a:hover{color:var(--accent);}
+.fnav{display:flex;gap:48px;flex-wrap:wrap;}
+.fcol h4{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:16px;font-family:'Syne',sans-serif;}
+.fcol a{display:block;color:rgba(255,255,255,.38);text-decoration:none;font-size:13px;margin-bottom:10px;transition:color .2s;line-height:1.4;}
+.fcol a:hover{color:var(--accent);}
+.fbot{border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.fcopy{color:rgba(255,255,255,.2);font-size:12px;}
+
+/* ── WHATSAPP ─────────────────────────── */
+.wa{position:fixed;bottom:28px;right:28px;z-index:150;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);text-decoration:none;transition:transform .2s;}
+.wa:hover{transform:scale(1.1);}
+.wa svg{width:28px;height:28px;fill:#fff;}
+.wa-dot{position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:var(--accent);border-radius:50%;border:2px solid #090909;animation:waPulse 2s infinite;}
+
+/* ── ANIMATIONS ───────────────────────── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+@keyframes waPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.3);opacity:.7}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.rev{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s;}
+.rev.in{opacity:1;transform:translateY(0);}
+.tw-cur::after{content:'|';animation:blink 1s step-end infinite;color:var(--accent);}
+
+/* ── MOBILE ───────────────────────────── */
+@media(max-width:1024px){
+  nav{padding:14px 28px;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .hero{padding:130px 28px 80px;}
+  .hero h1{letter-spacing:-2.5px;}
+  .sec{padding:72px 28px;}
+  .trust-bar{padding:18px 28px;gap:20px;}
+  .trust-clients{gap:16px;}
+  .why-grid{grid-template-columns:1fr;gap:36px;}
+  footer{padding:44px 28px 24px;}
+  .ftop{flex-direction:column;gap:32px;}
+  .wa{bottom:20px;right:20px;}
+  .process-steps::before{display:none;}
+}
+@media(max-width:640px){
+  nav{padding:12px 18px;}
+  .hero{padding:110px 18px 72px;}
+  .hero h1{font-size:clamp(40px,10vw,64px);letter-spacing:-2px;}
+  .hero-stats{gap:28px;}
+  .sec{padding:56px 18px;}
+  .trust-bar{flex-direction:column;align-items:flex-start;gap:12px;padding:20px 18px;}
+  .services-grid{grid-template-columns:1fr;}
+  .crow{flex-direction:column;}
+  .pgrid{grid-template-columns:1fr;}
+  .tgrid{grid-template-columns:1fr;}
+  .results-grid{grid-template-columns:repeat(2,1fr);}
+  .process-steps{grid-template-columns:1fr;gap:28px;}
+  footer{padding:36px 18px 20px;}
+  .fnav{gap:28px;}
+  .fbot{flex-direction:column;align-items:flex-start;}
+  .wa{bottom:16px;right:16px;width:50px;height:50px;}
+  .wa svg{width:24px;height:24px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a class="logo" href="index.html">
+    <div class="logo-mark">N</div>
+    Nexus<span>Wave</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="services.html">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-btn" href="#contact">Get Started</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">🏠 Home</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#why" onclick="closeMenu()">Why Us</a>
+  <a href="portfolio.html" onclick="closeMenu()">Portfolio</a>
+  <a href="services.html" onclick="closeMenu()">Pricing</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="#contact" class="mob-btn" onclick="closeMenu()">Get Started →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow" id="blob"></div>
+  <div class="hero-pill">Digital Marketing Agency · Pakistan</div>
+  <h1>Turning Brands<br/>into <em>Growth</em><br/>Machines.</h1>
+  <p class="hero-sub">We combine strategic marketing, creative content, smart automation, and web design to grow your business — not just your follower count.</p>
+  <div class="hero-btns">
+    <a href="#contact" class="btn-dark">Start Growing →</a>
+    <a href="portfolio.html" class="btn-ghost">See Real Work</a>
+  </div>
+  <div class="hero-stats">
+    <div>
+      <div class="stat-n">50<span>+</span></div>
+      <div class="stat-l">Projects delivered</div>
+    </div>
+    <div>
+      <div class="stat-n">20<span>+</span></div>
+      <div class="stat-l">Happy clients</div>
+    </div>
+    <div>
+      <div class="stat-n">6</div>
+      <div class="stat-l">Core services</div>
+    </div>
+    <div>
+      <div class="stat-n">4<span>+</span></div>
+      <div class="stat-l">Industries served</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <span class="trust-label">Trusted by</span>
+  <div class="trust-divider"></div>
+  <div class="trust-clients">
+    <span class="trust-client">Mariam Montessori School</span>
+    <span class="trust-client">PPP Pakistan</span>
+    <span class="trust-client">Funny Plates</span>
+    <span class="trust-client">Green Generation</span>
+    <span class="trust-client">Bikanery Restaurant</span>
+    <span class="trust-client">Khaiyam Ali</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec what-we-do" id="services">
+  <div class="rev"><p class="sec-tag acc">What We Do</p></div>
+  <div class="rev"><h2 class="sec-title" style="color:#fff;">Six services.<br/>One growth system.</h2></div>
+  <div class="rev"><p class="sec-sub">Every service is built to work alone or together — all focused on real, measurable results for your business.</p></div>
+  <div class="services-grid rev">
+    <div class="svc">
+      <div class="svc-num">01</div>
+      <span class="svc-icon">📱</span>
+      <h3>Social Media Management</h3>
+      <p>Strategic content planning, design, and management that builds a genuine brand presence and drives real engagement.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-num">02</div>
+      <span class="svc-icon">🎯</span>
+      <h3>Paid Advertising</h3>
+      <p>Meta and Google Ads campaigns built around leads and sales — every rupee tracked, every campaign optimised.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-num">03</div>
+      <span class="svc-icon">✦</span>
+      <h3>Creative & Content</h3>
+      <p>Graphics, reels, carousels, and content that stop the scroll, communicate your brand, and convert attention into action.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-num">04</div>
+      <span class="svc-icon">⚡</span>
+      <h3>Automation & Growth Systems</h3>
+      <p>WhatsApp bots, lead follow-up sequences, and CRM integrations that work 24/7 so you never miss a lead again.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-num">05</div>
+      <span class="svc-icon">🌐</span>
+      <h3>Web & eCommerce Design</h3>
+      <p>Fast, mobile-first websites and Shopify stores built to generate leads and sales from day one.</p>
+      <span class="svc-new">New Service</span>
+    </div>
+    <div class="svc">
+      <div class="svc-num">06</div>
+      <span class="svc-icon">🤖</span>
+      <h3>AI-Powered Marketing Tools</h3>
+      <p>Custom AI chatbots, automated content engines, and smart tools built specifically for your business.</p>
+      <span class="svc-new">New Service</span>
+    </div>
+  </div>
+  <div class="services-cta rev">
+    <a href="services.html">View full pricing and packages →</a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec process">
+  <div class="rev"><p class="sec-tag light">How We Work</p></div>
+  <div class="rev"><h2 class="sec-title">Our process.</h2></div>
+  <div class="rev"><p class="sec-sub">Simple, clear, and built around your goals from day one.</p></div>
+  <div class="process-steps rev">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h4>Discovery Call</h4>
+      <p>We learn about your business, goals, audience, and competitors before anything else.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h4>Custom Strategy</h4>
+      <p>We build a tailored plan — not a template — designed specifically for your industry and goals.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h4>Execution</h4>
+      <p>We launch campaigns, create content, set up automations, and deliver real, hands-on work.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h4>Optimise & Grow</h4>
+      <p>We track performance, share clear reports, and continuously improve to compound your results.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="sec why" id="why">
+  <div class="why-grid">
+    <div>
+      <div class="rev"><p class="sec-tag light">Why Nexus Wave</p></div>
+      <div class="rev"><h2 class="sec-title">Simple strategies.<br/>Real results.</h2></div>
+      <div class="rev"><p class="sec-sub">We have delivered real work for real businesses — from schools and restaurants to political campaigns and retail brands.</p></div>
+      <div class="why-list">
+        <div class="why-item rev">
+          <div class="why-check">✓</div>
+          <div>
+            <h4>Proven Client Track Record</h4>
+            <p>We've managed live social accounts, run real Meta Ads campaigns, and delivered measurable results for actual businesses across Pakistan.</p>
+          </div>
+        </div>
+        <div class="why-item rev">
+          <div class="why-check">✓</div>
+          <div>
+            <h4>6 Services Under One Roof</h4>
+            <p>Social media, ads, content, automation, web design, and AI tools — all connected and all handled by one team.</p>
+          </div>
+        </div>
+        <div class="why-item rev">
+          <div class="why-check">✓</div>
+          <div>
+            <h4>Built Around Your Goals</h4>
+            <p>No copy-paste strategies. We go deep on your industry and build a system around what you actually need.</p>
+          </div>
+        </div>
+        <div class="why-item rev">
+          <div class="why-check">✓</div>
+          <div>
+            <h4>We Do the Actual Work</h4>
+            <p>Hands-on execution every step of the way — not just strategy calls and advice.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-box rev">
+      <h3>Real clients. Real campaigns. Real results — across multiple industries.</h3>
+      <p>From Mariam Montessori School to Bikanery Restaurant, from PPP Pakistan to personal brands — we have delivered across education, F&B, political campaigns, lifestyle, and retail.</p>
+      <div class="bstat">
+        <div class="bnum">50+</div>
+        <div class="blabel">Projects delivered across social media, ads, design, and automation</div>
+      </div>
+      <div class="bstat">
+        <div class="bnum">6</div>
+        <div class="blabel">Services working together as a complete growth system</div>
+      </div>
+      <a href="portfolio.html" class="btn-dark" style="margin-top:16px;color:#fff;display:inline-block;">See Our Real Work →</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS NUMBERS -->
+<section class="sec results">
+  <div class="rev"><p class="sec-tag acc">By The Numbers</p></div>
+  <div class="rev"><h2 class="sec-title" style="color:#fff;">The numbers<br/>speak for themselves.</h2></div>
+  <div class="results-grid rev">
+    <div class="result-card">
+      <div class="result-big">50+</div>
+      <div class="result-label">Total projects delivered across all services</div>
+    </div>
+    <div class="result-card">
+      <div class="result-big">20+</div>
+      <div class="result-label">Clients served across Pakistan and beyond</div>
+    </div>
+    <div class="result-card">
+      <div class="result-big">6+</div>
+      <div class="result-label">Industries covered — from schools to showrooms</div>
+    </div>
+    <div class="result-card">
+      <div class="result-big">24/7</div>
+      <div class="result-label">Automation systems running for clients around the clock</div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO PREVIEW -->
+<section class="sec portfolio-preview">
+  <div class="rev"><p class="sec-tag light">Our Work</p></div>
+  <div class="rev"><h2 class="sec-title">Real clients.<br/>Real work.</h2></div>
+  <div class="rev"><p class="sec-sub">Every project below was delivered for an actual business. Click to view the full portfolio.</p></div>
+  <div class="pgrid rev">
+    <a class="pcard" href="portfolio.html">
+      <div class="pthumb" style="background:linear-gradient(135deg,#0d1f08,#1a3d10)">🏫<span class="pthumb-tag">Education</span></div>
+      <div class="pbody">
+        <p class="pmeta">School · Social Media + Meta Ads</p>
+        <p class="ptitle">Mariam Montessori School</p>
+        <div class="pbadges"><span class="pbadge">Real Client</span><span class="pbadge">Meta Ads</span><span class="pbadge">Social Media</span></div>
+      </div>
+    </a>
+    <a class="pcard" href="portfolio.html">
+      <div class="pthumb" style="background:linear-gradient(135deg,#1a0505,#3d1010)">🏛️<span class="pthumb-tag">Political</span></div>
+      <div class="pbody">
+        <p class="pmeta">Campaign · Content + Design</p>
+        <p class="ptitle">PPP Pakistan</p>
+        <div class="pbadges"><span class="pbadge">Real Client</span><span class="pbadge">Campaign Design</span></div>
+      </div>
+    </a>
+    <a class="pcard" href="portfolio.html">
+      <div class="pthumb" style="background:linear-gradient(135deg,#0d1a1a,#0f2e28)">🍽️<span class="pthumb-tag">F&B</span></div>
+      <div class="pbody">
+        <p class="pmeta">Restaurant · Design + Social</p>
+        <p class="ptitle">Funny Plates</p>
+        <div class="pbadges"><span class="pbadge">Real Client</span><span class="pbadge">Design</span></div>
+      </div>
+    </a>
+  </div>
+  <div class="viewall rev">
+    <a href="portfolio.html" class="btn-dark">View All Projects →</a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec testi">
+  <div class="rev"><p class="sec-tag light">Client Feedback</p></div>
+  <div class="rev"><h2 class="sec-title">What our clients say.</h2></div>
+  <div class="tgrid">
+    <div class="tcard rev">
+      <div class="tstars">★★★★★</div>
+      <p class="ttext">"Nexus Wave managed our social content and campaigns with great professionalism. They understood our goals and delivered results that genuinely helped grow our online presence."</p>
+      <div class="tauthor"><div class="tavatar" style="background:#C8F04A;">MF</div><div><p class="tname">Muhammad Fareed</p><p class="trole">PPP Pakistan</p></div></div>
+    </div>
+    <div class="tcard rev">
+      <div class="tstars">★★★★★</div>
+      <p class="ttext">"Working with Nexus Wave was a great experience. They handled our social media with creativity and real consistency. Our followers and engagement increased noticeably."</p>
+      <div class="tauthor"><div class="tavatar" style="background:#F0E8C8;">FP</div><div><p class="tname">Funny Plates</p><p class="trole">Restaurant Brand</p></div></div>
+    </div>
+    <div class="tcard rev">
+      <div class="tstars">★★★★★</div>
+      <p class="ttext">"Nexus Wave has been instrumental in taking our social media presence to the next level. We look forward to continuing to grow our business with their support."</p>
+      <div class="tauthor"><div class="tavatar" style="background:#C8E8F0;">KA</div><div><p class="tname">Khaiyam Ali</p><p class="trole">Green Generation</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq">
+  <div class="rev"><p class="sec-tag light">FAQ</p></div>
+  <div class="rev"><h2 class="sec-title">Common questions.</h2></div>
+  <div class="faq-list rev">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><h4>What industries do you work with?</h4><div class="faq-icon">+</div></div>
+      <div class="faq-a">We have worked with schools and educational institutions, restaurants and F&B brands, retail and fashion brands, automotive showrooms, political campaigns, and service-based businesses. Our strategies adapt to each industry.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><h4>Do I need to sign a long-term contract?</h4><div class="faq-icon">+</div></div>
+      <div class="faq-a">No. Our monthly retainer services are month-to-month — we keep clients because of results, not locked contracts. Project-based work like websites and automation setups is quoted separately.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><h4>Is the ad spend included in your management fee?</h4><div class="faq-icon">+</div></div>
+      <div class="faq-a">No — ad spend goes directly to Meta or Google and is separate from our management fee. We manage your budget and campaigns; you pay the platforms directly. We recommend starting with at least PKR 15,000–30,000/month in ad spend for meaningful results.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><h4>How quickly will I see results?</h4><div class="faq-icon">+</div></div>
+      <div class="faq-a">Paid ads typically show initial results within 2 weeks as we test and optimise. Social media growth takes 2–3 months for meaningful traction. Automation results are immediate — your leads will get faster responses from day one.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><h4>Can I start with just one service?</h4><div class="faq-icon">+</div></div>
+      <div class="faq-a">Absolutely. Most clients start with social media management or paid ads, then add more services as their business grows. Everything is built to connect seamlessly as you scale.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><h4>Do you work with clients outside Pakistan?</h4><div class="faq-icon">+</div></div>
+      <div class="faq-a">Yes. We work with remote clients and communicate via WhatsApp and email. We have delivered work for clients across the Gulf and South Asia.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <p class="sec-tag acc">Get In Touch</p>
+  <h2 class="sec-title">Ready to grow<br/>your brand?</h2>
+  <p class="sec-sub">Tell us about your business and we will build a strategy around your goals.</p>
+  <!-- Go to formspree.io, sign up free, create a form, replace YOUR_FORM_ID below -->
+  <form class="cform" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="cForm">
+    <div class="crow">
+      <input class="cinput" type="text" name="name" placeholder="Your Name" required/>
+      <input class="cinput" type="text" name="business" placeholder="Business Name"/>
+    </div>
+    <input class="cinput" type="email" name="email" placeholder="Email Address" required/>
+    <input class="cinput" type="tel" name="phone" placeholder="WhatsApp Number"/>
+    <select class="cinput" name="service" style="cursor:pointer;">
+      <option value="" disabled selected>Which service are you interested in?</option>
+      <option>Social Media Management</option>
+      <option>Paid Advertising (Meta / Google)</option>
+      <option>Creative & Content Production</option>
+      <option>Automation & Growth Systems</option>
+      <option>Web & eCommerce Design</option>
+      <option>AI-Powered Marketing Tools</option>
+      <option>Full Growth Package (All Services)</option>
+    </select>
+    <textarea class="cinput" name="message" placeholder="Tell us about your goals and what you need..." rows="4"></textarea>
+    <button type="submit" class="csub" id="cBtn">Send Message →</button>
+    <div class="cmsg" id="cMsg"></div>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ftop">
+    <div class="fbrand">
+      <div class="flogo">Nexus<span>Wave</span> Media Agency</div>
+      <div class="ftagline">Turning Brands into Growth Machines.<br/>Digital marketing, automation and web design for growing businesses.</div>
+      <div class="fcontact">
+        <a href="tel:03047355553">📞 0304 7355553</a>
+        <a href="mailto:nexuswave0@gmail.com">✉️ nexuswave0@gmail.com</a>
+        <a href="https://wa.me/923047355553" target="_blank">💬 WhatsApp Us</a>
+      </div>
+    </div>
+    <div class="fnav">
+      <div class="fcol">
+        <h4>Services</h4>
+        <a href="services.html">Social Media</a>
+        <a href="services.html">Paid Advertising</a>
+        <a href="services.html">Creative & Content</a>
+        <a href="services.html">Automation</a>
+        <a href="services.html">Web Design</a>
+        <a href="services.html">AI Tools</a>
+      </div>
+      <div class="fcol">
+        <h4>Company</h4>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="fcol">
+        <h4>Connect</h4>
+        <a href="https://wa.me/923047355553" target="_blank">WhatsApp</a>
+        <a href="https://instagram.com/nexuswavemediaagency" target="_blank">Instagram</a>
+        <a href="https://linkedin.com/company/nexuswave" target="_blank">LinkedIn</a>
+        <a href="https://facebook.com/nexuswavemedia" target="_blank">Facebook</a>
+      </div>
+    </div>
+  </div>
+  <div class="fbot">
+    <p class="fcopy">© 2025 Nexus Wave Media Agency. All rights reserved.</p>
+    <p class="fcopy">nexuwavemediaagency.co</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a class="wa" href="https://wa.me/923047355553?text=Hi%20Nexus%20Wave%2C%20I%27d%20like%20to%20grow%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <div class="wa-dot"></div>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+// Reveal on scroll
+const ro=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('in');ro.unobserve(el.target);}});},{threshold:.07});
+document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+
+// Parallax blob
+const blob=document.getElementById('blob');
+if(blob)window.addEventListener('scroll',()=>{blob.style.transform='translateY(calc(-50% + '+(scrollY*.16)+'px))';},{passive:true});
+
+// Typewriter on hero
+const h1=document.querySelector('.hero h1');
+if(h1){const em=h1.querySelector('em');if(em){const w=em.textContent;em.textContent='';em.classList.add('tw-cur');let i=0;setTimeout(()=>{const t=setInterval(()=>{em.textContent+=w[i++];if(i>=w.length){em.classList.remove('tw-cur');clearInterval(t);}},80);},1100);}}
+
+// Mobile menu
+function toggleMenu(){
+  const m=document.getElementById('mobileMenu');
+  m.classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+document.addEventListener('click',e=>{
+  const nav=document.getElementById('navbar');
+  const menu=document.getElementById('mobileMenu');
+  if(!nav.contains(e.target)&&!menu.contains(e.target))menu.classList.remove('open');
+});
+
+// FAQ
+function toggleFaq(el){
+  const item=el.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-icon').textContent='+';});
+  if(!isOpen){item.classList.add('open');el.querySelector('.faq-icon').textContent='\u2212';}
+}
+
+// Contact form
+document.getElementById('cForm').addEventListener('submit',async function(e){
+  e.preventDefault();
+  const b=document.getElementById('cBtn'),m=document.getElementById('cMsg');
+  b.disabled=true;b.textContent='Sending...';m.style.display='none';
+  try{
+    const r=await fetch(this.action,{method:'POST',body:new FormData(this),headers:{'Accept':'application/json'}});
+    if(r.ok){m.textContent='Message sent! We will be in touch within 24 hours.';m.className='cmsg ok';this.reset();b.textContent='Sent \u2713';}
+    else throw 0;
+  }catch{m.textContent='Something went wrong. WhatsApp us directly at 0304 7355553';m.className='cmsg err';b.disabled=false;b.textContent='Send Message \u2192';}
+  m.style.display='block';
+});
+</script>
+</body>
+</html>
